@@ -1,15 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- DAISY UI AND TAILWIND CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-    <title>Alfa-crash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <title>Alpha-clash</title>
+    <style>
+        .popins-font {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .anton-font {
+
+            font-family: "Anton", sans-serif;
+
+
+
+        }
+    </style>
 </head>
+
 <body>
-   <div>Home</div>
-   <div>score</div>
+    <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center popins-font">
+        <!-- home section -->
+        <section class="Home text-white  ">
+            <div class="flex flex-col items-center justify-center space-y-5 min-h-screen ">
+                <h1 class="text-8xl anton-font ">ALPHABET CLASH</h1>
+                <p class="popins-font text-xl font-normal">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button ondblclick="play()" class="btn btn-active bg-whi black popins-font text-2xl font-normal">Play Now</button>
+            </div>
+        </section>
+        <!-- playground section start here -->
+        <section class="Playground hidden">
+            <div class="flex flex-col items-center space-y-8 pt-5">
+                <!-- screen -->
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC]  bg-[#FFFFFFB3]">
+                    <div class="flex justify-center">
+                        <p class="text-white bg-[#2F2941]  popins-font px-6 pb-4 rounded-b-xl">Don't watch keyboard
+                            while playing...</p>
+                    </div>
+                    <div class="flex justify-center h-full items-center "></div>
+                        <p class="text-9xl font-bold popins-font ">Y</p>
+                    </div>
+                </div>
+
+                <!-- keyboard start -->
+                <div class="justify-center items-center popins-font  text-xl ">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd"> <span class="text-orange-600">y</span></kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- life score -->
+                <div class="flex justify-between items-center w-3/4">
+                    <div>
+                        <button class="btn bg-[#894189] rounded-full">
+                            life
+                            <img src="images/Group 23.svg" alt="">
+                            <span>1</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn bg-[#360490] rounded-full text-white">
+                            Score
+                            <img src="images/Group 23.svg" alt="">
+                            <span>1</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- playground section end here -->
+        <section class="Score min-h-screen p-4 rounded-lg bg-[#ffffff33] hidden">
+            <div class=" text-white  flex flex-col justify-center items-center space-y-4  ">
+                <p class= "text-6xl popins-font font-bold text-white"><span class="font-bold">Score :</span> 14</p>
+            <button class="btn btn-active bg-white black popins-font text-2xl font-normal ">Play Now</button>
+           <p class="popins-font font-normal  text-white">Practice will make you Pro</p>
+            </div>
+
+        </section>
+    </main>
+    <script src="script/alpha-clash.js"></script>
 </body>
+
 </html>
