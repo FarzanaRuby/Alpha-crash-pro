@@ -10,10 +10,15 @@ function showElementById(eventid){
     console.log(eventid)
 }
 
-function setBackgroundColor(eelementId){
-    const element = document.getAnimations(eelementId);
-    element.classList.add('bg-orange-400');
+function addBackgroundColor(elementId){
+   let color = document.getElementById(elementId);
+   color.classList.add('bg-orange-400');
 }
+function removeBackgroundColor(elementId){
+    let color = document.getElementById(elementId);
+    color.classList.remove('bg-orange-400');
+ }
+  
  
 function getRendomAlphabet(){
     const alphabetString= 'abcdefghijklmnopqrstuvwxyz'
@@ -31,6 +36,21 @@ function getRendomAlphabet(){
 
   
  }
+               // get score part
+ function currrentScoreElementText(eventid){
+    const element = document.getElementById(eventid);
+    const textElement = element.innerText;
+    const numberElement = parseInt(textElement);
+    // const updateNumber = numberElement+1;
+    // const updateScore =updateNumber.innerText;
+  return numberElement;
+ }
 
+ function setText (elementId,value){
+    const element = document.getElementById(elementId,value);
+    element.innerText=value;
+ }
+
+   
  
 

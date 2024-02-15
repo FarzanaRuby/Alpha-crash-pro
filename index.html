@@ -37,11 +37,12 @@
             <div class="flex flex-col items-center justify-center space-y-5 min-h-screen ">
                 <h1 class="text-8xl anton-font ">ALPHABET CLASH</h1>
                 <p class="popins-font text-xl font-normal">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button ondblclick="play()" class="btn btn-active bg-whi black popins-font text-2xl font-normal">Play Now</button>
+                <button ondblclick="play()" class="btn btn-active bg-whi black popins-font text-2xl font-normal">Play
+                    Now</button>
             </div>
         </section>
         <!-- playground section start here -->
-        <section id="play-ground"  class="hidden">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center space-y-8 pt-5">
                 <!-- screen -->
                 <div
@@ -50,78 +51,82 @@
                         <p class="text-white bg-[#2F2941]  popins-font px-6 pb-4 rounded-b-xl">Don't watch keyboard
                             while playing...</p>
                     </div>
-                    <div class="flex justify-center items-center uppercase "> <p id="random-alphabet" class="text-9xl font-bold popins-font ">Y</p></div>
-                       
+                    <div class="flex justify-center items-center uppercase ">
+                        <p id="random-alphabet" class="text-9xl font-bold popins-font ">Y</p>
                     </div>
-                </div>
 
-                <!-- keyboard start -->
-                <div class="justify-center items-center popins-font  text-xl ">
-                    <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd id="q" class="kbd">q</kbd>
-                        <kbd id="w" class="kbd">w</kbd>
-                        <kbd id="e" class="kbd">e</kbd>
-                        <kbd id="r" class="kbd">r</kbd>
-                        <kbd id="t" class="kbd">t</kbd>
-                        <kbd id="y" class="kbd">y</kbd>
-                        <kbd id="u" class="kbd">u</kbd>
-                        <kbd id="i" class="kbd">i</kbd>
-                        <kbd id="o" class="kbd">o</kbd>
-                        <kbd id="p" class="kbd">p</kbd>
-                    </div>
-                    <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd id="a" class="kbd">a</kbd>
-                        <kbd id="s" class="kbd">s</kbd>
-                        <kbd id="d" class="kbd">d</kbd>
-                        <kbd id="f" class="kbd">f</kbd>
-                        <kbd id="g" class="kbd">g</kbd>
-                        <kbd id="h" class="kbd">h</kbd>
-                        <kbd id="j" class="kbd">j</kbd>
-                        <kbd id="k" class="kbd">k</kbd>
-                        <kbd id="l" class="kbd">l</kbd>
-                    </div>
-                    <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd id="z" class="kbd">z</kbd>
-                        <kbd id="x" class="kbd">x</kbd>
-                        <kbd id="c" class="kbd">c</kbd>
-                        <kbd id="v" class="kbd">v</kbd>
-                        <kbd id="b" class="kbd">b</kbd>
-                        <kbd id="n" class="kbd">n</kbd>
-                        <kbd id="m" class="kbd">m</kbd>
-                        <kbd id="/" class="kbd">/</kbd>
-                    </div>
                 </div>
-                <!-- keyboard end -->
-                <!-- life score -->
-                <div class="flex justify-between items-center w-3/4">
-                    <div>
-                        <button class="btn bg-[#894189] rounded-full">
-                            life
-                            <img src="images/Group 23.svg" alt="">
-                            <span>1</span>
-                        </button>
-                    </div>
-                    <div>
-                        <button class="btn bg-[#360490] rounded-full text-white">
-                            Score
-                            <img src="images/Group 23.svg" alt="">
-                            <span>1</span>
-                        </button>
-                    </div>
+            </div>
+
+            <!-- keyboard start -->
+            <div class="justify-center items-center popins-font  text-xl mt-8">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
                 </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+            <!-- keyboard end -->
+            <!-- life score -->
+            <div class="flex justify-between items-center w-3/2">
+                <div>
+                    <button class="btn bg-[#894189] rounded-full">
+                        life
+                        <img src="images/Group 23.svg" alt="">
+                        <span id="current-life">5</span>
+                    </button>
+                </div>
+                <div>
+                    <!-- score button -->
+                    <button class="btn bg-[#360490] rounded-full text-white">
+                        Score
+                        <img src="images/Group 23.svg" alt="">
+                        <span id="current-score">0</span>
+                    </button>
+                </div>
+            </div>
             </div>
         </section>
         <!-- playground section end here -->
-        <section class="Score min-h-screen p-4 rounded-lg bg-[#ffffff33] hidden">
+        <section id="final-score" class=" min-h-screen p-4 rounded-lg bg-[#ffffff33] hidden">
             <div class=" text-white  flex flex-col justify-center items-center space-y-4  ">
-                <p class= "text-6xl popins-font font-bold text-white"><span class="font-bold">Score :</span> 14</p>
-            <button class="btn btn-active bg-white black popins-font text-2xl font-normal ">Play Now</button>
-           <p class="popins-font font-normal  text-white">Practice will make you Pro</p>
+                <h3 class="font-bold text-5xl">Game over!</h3>
+                <p class="text-6xl popins-font font-bold text-white"><span class="font-bold">Score :</span>  <span id="last-score">14</span></p>
+                <button onclick="play()" class="btn btn-active bg-white black popins-font text-2xl font-normal ">Play Again</button>
+                <p class="popins-font font-normal  text-white">Practice will make you Pro</p>
             </div>
 
         </section>
     </main>
-  
+
     <script src="script/alpha-clash.js"></script>
     <script src="script/utility.js"></script>
 </body>
